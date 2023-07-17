@@ -9,6 +9,9 @@ export default function Header() {
     const [isClicked, setIsClicked] = useState(false)
     const [activeItem, setActiveItem] = useState(null)
     const dropDownItems =["About", "Projects", "Contact", "CV", "Email", "LinkedIn"]
+    const dropDownFunctions = [() => {
+        setIsClicked(prev => !prev)
+        scrollTo({top: 400, behavior: 'smooth'})}]
     const docBody = document.body
 
     function textChange() {
@@ -29,8 +32,6 @@ export default function Header() {
             iterations += 1 / 3
         }, 30)
         
-       
-         
     }
 
     function addClasses() {
@@ -39,10 +40,11 @@ export default function Header() {
 
     const liElements = dropDownItems.map((item, index) => {
      return( 
-     <a className="drop-down-links" href="#"><li 
-        className={`drop-down-list-items ${activeItem === index && 'is-hovered'}`} 
+     <a className="drop-down-links"><li 
+        className={`drop-down-list-items ${activeItem === index && 'is-hovered'}` } 
         onMouseOver={() => setActiveItem(index)}
         onMouseLeave={() => setActiveItem(null)}
+        onClick={dropDownFunctions[index]}
         key={item}>{item}</li></a>)
     })
 
