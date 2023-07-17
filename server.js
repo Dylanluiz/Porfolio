@@ -36,6 +36,8 @@ import { createServer, Model } from "miragejs";
             const id = request.params.id
             return schema.projects.find(id)
         })
+
+        this.passthrough('https://api.emailjs.com/api/v1.0/email/send-form')
         
         this.logging = false
        }
@@ -43,5 +45,4 @@ import { createServer, Model } from "miragejs";
       
 
     })
-
 

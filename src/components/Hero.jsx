@@ -4,6 +4,11 @@ import Circle from "./Circle";
 
 export default function Hero() {
 
+    const contact = () => {
+        window.scrollTo({top:1500, behavior: 'smooth'})
+    }
+
+
     return (
         <section className="hero">
             <div className="hero--background">
@@ -17,7 +22,7 @@ export default function Hero() {
             <p className="hero--intro">
                 Welcome to my showcase portfolio, please have a look around.
             </p>
-            <a href="#" className="hero--contact">Contact</a>
+            <a onClick={() => contact()} className="hero--contact">Contact</a>
             <Circle />
         </section>
     )

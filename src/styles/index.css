@@ -486,6 +486,59 @@ body, html {
   margin: 0 0 0 35px;
 }
 
+/* contact form */
+
+.email-form {
+  display: flex;
+  flex-direction: row;
+  padding: 50px 20px;
+  gap: 5px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex-basis: 60%;
+}
+
+.name-input, 
+.email-input, 
+.message-input {
+  border-radius: 10px;
+  border: 2px solid #131515;
+  background-color: #fffafb;
+  padding: 10px;
+  flex: 1;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 15px;
+}
+
+.message-input {
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.submit-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 0;
+  color: #131515;
+  background-color: #ffea00;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  flex-basis: 40%;
+  cursor: pointer;
+}
+
+.name-input:focus,
+.email-input:focus,
+.message-input:focus {
+  background-color: #fff9b1;
+  color: #131515;
+}
+
 /* read more */
 
 .read-more-container {
@@ -494,7 +547,7 @@ body, html {
   padding: 10px 20px;
   background-color: #fffafb;
   animation: easeload 0.4s ease-in-out;
-  background-image: url('../../public/images/circle-scatter-haikei.png');
+  background-image: url('../../public/images/blob-background-read-more.svg');
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
@@ -551,6 +604,29 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.to-top {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  width: 50px;
+  aspect-ratio: 1;
+  background-color: #222222;
+  z-index: 2;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  animation: fade-in 0.4s ease-in;
+  opacity: 1;
+  color: #357ded;
+}
+
+@keyframes fade-in {
+  from { opacity: 0;}
+  to {opacity: 1;}
 }
 
 /* utility */

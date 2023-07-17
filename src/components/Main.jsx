@@ -1,11 +1,11 @@
-import React, { startTransition, useContext, useEffect, useState } from "react";
-import { about } from "../data/about-data";
-import Projects from "./Projects";
-import { ScrollContext } from "../App";
+import React, { startTransition, useContext, useEffect, useRef, useState } from "react";
+import { about } from "../data/about-data"
+import { ScrollContext } from "../App"
+import { FaChevronUp } from 'react-icons/fa'
 
 export default function Main() {
     const { scrollY } = useContext(ScrollContext)
-    const [isComplete, setIsComplete] = useState(false)
+    const [isPastTop, setIsPastTop] = useState(false)
 
     const scrollTrack = (num, startPosTransform, endingValue, startPos) => {
         const startValue = startPos
@@ -23,6 +23,16 @@ export default function Main() {
         } 
     }
 
+    useEffect(() => {
+        
+        if (scrollY > 5) {
+            setIsPastTop(prev => prev = true)
+        } else {
+            setIsPastTop(prev => prev = false)
+        }
+
+    }, [scrollY])
+        
     const scaleStyle = [
         {
             transform: `scale(${scrollTrack(0.005, 3, 1, 0.98)})`, transition: "all 0.4s ease"
@@ -58,6 +68,9 @@ export default function Main() {
 
     return (
         <main>
+           {isPastTop && <div onClick={
+                () => window.scrollTo({top: 0, behavior: 'smooth'})} 
+                className="to-top"><FaChevronUp /></div>}
             <section className="about-section">
                 <div className="about-container">
                     {aboutElements}

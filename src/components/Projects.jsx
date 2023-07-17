@@ -15,7 +15,7 @@ export default function Projects() {
 
         const scaledScrollY = start + (scrollY * increment)
         const adjustedScrollY = Math.max(start, Math.min(scaledScrollY, end))
-        console.log(scrollY)
+ 
         if (scrollY > startScale) {
             return adjustedScrollY
         } else {
