@@ -45,14 +45,14 @@ export default function Main() {
         }]
 
 
-    const transformX = [{
-        transform: `translateX(${scrollTrack(30, 1, 500, -1)}px)`,  transition: "all 0.3s ease"
+    const transformX = [{ //this need to be updated for diffrent display sizes prehaps an object would be better
+        transform: `translateX(${scrollTrack(30, 1, 800, -1)}px)`,  transition: "all 0.3s ease"
     }, 
     {
-        transform: `translateX(${scrollTrack(25, 10, 500, -1)}px)`, transition: "all 0.3s ease"
+        transform: `translateX(${scrollTrack(25, 10, 800, -1)}px)`, transition: "all 0.3s ease"
     },
     {
-        transform: `translateX(${scrollTrack(15, 12, 500, -1)}px)`, transition: "all 0.3s ease"
+        transform: `translateX(${scrollTrack(15, 12, 800, -1)}px)`, transition: "all 0.3s ease"
     }]
 
     const aboutElements = about.map((item, index) =>    
