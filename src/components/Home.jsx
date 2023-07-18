@@ -4,6 +4,8 @@ import Main from "./Main";
 import Projects from "./Projects";
 import Hero from "./Hero";
 import Contact from "./Contact";
+import Intersection from './Intersection'
+import Footer from "./Footer"
 
 export default function Home() {
 
@@ -12,8 +14,17 @@ export default function Home() {
             <Header/>
             <Hero />
             <Main />
+            <Intersection
+                text='Here are some of my'
+                spanText='Projects'
+            />
             <Projects />
+            <Intersection
+                text='Get in'
+                spanText='contact'
+            />
             <Contact />
+            <Footer />
         </>
     )
 }
