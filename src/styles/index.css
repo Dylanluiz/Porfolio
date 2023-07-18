@@ -712,8 +712,11 @@ footer > a > svg {
   .hero--blob2 {
     height: 340px;
     width: 300px;
+    left: 100px;
     top: -360px;
-    right: -640px;
+    /* top: -360px;
+    right: -640px; */
+    margin-left: auto;
   }
 
   .hero--title {
