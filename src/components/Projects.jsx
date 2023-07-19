@@ -6,6 +6,7 @@ import { ScrollContext } from '../App'
 export default function Projects() {
     const [projData, setProjData] = useState([])
     const {scrollY} = useContext(ScrollContext)
+    const screenWidth = window.innerWidth
 
     function scale(inc, startPos, endPos, startPosTransform) {
         const start = startPos
@@ -23,12 +24,17 @@ export default function Projects() {
         }
     }
     
-    const styles = [{
-        transform: `scale(${scale(0.001, 0.98, 1, 25)})`, transition: 'all 0.4s ease'
+    const styles = screenWidth <= 767 ? [{
+        transform: `scale(${scale(0.001, 0.98, 1, 50)})`, transition: 'all 0.4s ease'
     }, 
     {
-        transform: `scale(${scale(0.001, 0.98, 1, 80)})`, transition: 'all 0.4s ease'
-    }]
+        transform: `scale(${scale(0.001, 0.98, 1, 100)})`, transition: 'all 0.4s ease'
+    }] : screenWidth >= 768 ? [{
+        transform: `scale(${scale(0.001, 0.98, 1, 65)})`, transition: 'all 0.4s ease'
+    }, 
+    {
+        transform: `scale(${scale(0.001, 0.98, 1, 65)})`, transition: 'all 0.4s ease'
+    }] : null
 
     useEffect(() => {
         let isConnected = true
@@ -56,7 +62,7 @@ export default function Projects() {
     return (
        <article key={id} className="project" style={styles[index]}>
         <p className="project--num">0{`${index + 1}`}.</p>
-            <img className="project--img" src={`${link}`} />
+            <img className="project--img" src={`${link[0]}`} />
             <h2 className="project--name">{name}</h2>
             <div className="project--tech-container">
                 {technologies.map(tech => <p className="project--tech">{tech}</p>)}

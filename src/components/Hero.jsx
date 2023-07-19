@@ -5,7 +5,7 @@ import Circle from "./Circle";
 export default function Hero() {
 
     const contact = () => {
-        window.scrollTo({top:1500, behavior: 'smooth'})
+        window.scrollTo({top:2500, behavior: 'smooth'})
     }
 
 

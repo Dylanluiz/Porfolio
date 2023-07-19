@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react"
 import { CSSTransition } from "react-transition-group"
 import {FaCode} from 'react-icons/fa'
+import {Link} from 'react-router-dom'
 
 export default function Header() {
     const [name, setName] = useState('Dylan Luiz')
@@ -8,10 +9,23 @@ export default function Header() {
     const letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     const [isClicked, setIsClicked] = useState(false)
     const [activeItem, setActiveItem] = useState(null)
-    const dropDownItems =["About", "Projects", "Contact", "CV", "Email", "LinkedIn"]
-    const dropDownFunctions = [() => {
+    const dropDownItems =["About", "Projects", "Contact", 'LinkedIn', 'CV', 'Email']
+    const dropDownFunctions = [
+        () => {
         setIsClicked(prev => !prev)
-        scrollTo({top: 400, behavior: 'smooth'})}]
+        scrollTo({top: 400, behavior: 'smooth'})}
+        ,
+        () => {
+            setIsClicked(prev => !prev)
+            scrollTo({top: 920, behavior: "smooth"})
+        }
+        ,
+        () => {
+            setIsClicked(prev => !prev)
+            scrollTo({top: 2500, behavior: "smooth"})
+        }
+    
+    ]
     const docBody = document.body
 
     function textChange() {
@@ -34,18 +48,52 @@ export default function Header() {
         
     }
 
+    function sendEmail() {
+
+    }
+
     function addClasses() {
         setIsClicked(prevClicked => !prevClicked)
     }
 
     const liElements = dropDownItems.map((item, index) => {
-     return( 
-     <a className="drop-down-links"><li 
-        className={`drop-down-list-items ${activeItem === index && 'is-hovered'}` } 
-        onMouseOver={() => setActiveItem(index)}
-        onMouseLeave={() => setActiveItem(null)}
-        onClick={dropDownFunctions[index]}
-        key={item}>{item}</li></a>)
+        
+        if (item === 'Email') {
+            return (
+                <a className="drop-down-links" href="mailto:dylan.luiz0@gmail.com"><li 
+                className={`drop-down-list-items ${activeItem === index && 'is-hovered'}` } 
+                onMouseOver={() => setActiveItem(index)}
+                onMouseLeave={() => setActiveItem(null)}
+                onClick={() => sendEmail()}
+                key={item}>{item}</li></a>
+            )
+        } else if (item === 'CV') {
+           return (
+           <a className="drop-down-links" href="https://www.linkedin.com/in/dylan-luiz-58a17a216/" target="_blank"><li 
+            className={`drop-down-list-items ${activeItem === index && 'is-hovered'}` } 
+            onMouseOver={() => setActiveItem(index)}
+            onMouseLeave={() => setActiveItem(null)}
+            onClick={dropDownFunctions[index]}
+            key={item}><Link to='/resume'>{item}</Link></li></a>)
+        } else if (item === 'LinkedIn') {
+            return (
+            <a className="drop-down-links" href=""><li 
+            className={`drop-down-list-items ${activeItem === index && 'is-hovered'}` } 
+            onMouseOver={() => setActiveItem(index)}
+            onMouseLeave={() => setActiveItem(null)}
+            onClick={dropDownFunctions[index]}
+            key={item}>{item}</li></a>)
+        } else  {
+            return ( 
+            <a className="drop-down-links"><li 
+            className={`drop-down-list-items ${activeItem === index && 'is-hovered'}` } 
+            onMouseOver={() => setActiveItem(index)}
+            onMouseLeave={() => setActiveItem(null)}
+            onClick={dropDownFunctions[index]}
+            key={item}>{item}</li></a>)
+        }
+     
+       
     })
 
     
