@@ -653,7 +653,7 @@ body, html {
 .read-more--desc {
   font-family: 'Roboto Condensed', sans-serif;
   line-height: 20px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   letter-spacing: 2px;
   margin: 0;
   padding: 0px 20px;
@@ -1050,6 +1050,12 @@ footer > a > svg {
     max-width: 700px;
   }
 
+  .about--desc-0, 
+  .about--desc-1, 
+  .about--desc-2 {
+    font-size: 1.1rem;
+  }
+
 
   /* cv */
 
@@ -1092,10 +1098,18 @@ footer > a > svg {
 
   /* about */
 
+  .about--desc-0 {
+    padding: 30px 120px 30px 30px; 
+  } 
+  .about--desc-1, 
+  .about--desc-2 {
+    padding: 30px 200px 30px 30px; 
+  }
+
   .about--desc-0, 
   .about--desc-1, 
   .about--desc-2 {
-    padding: 30px 120px 30px 30px; 
+    font-size: 1.2rem;
   }
 
 
