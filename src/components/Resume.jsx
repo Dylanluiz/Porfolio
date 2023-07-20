@@ -11,7 +11,7 @@ export default function Resume() {
             <div className="link-container">
             <Link to='..'><FaArrowLeft/>Go back</Link>
             <a href='../../public/files/Dylan_Luiz_frontend_developer.pdf'
-               download="Dylan_Luiz_frontend_developer-PDF-document"
+               download
                rel='noreferrer' >Download CV</a>
             </div>
 
