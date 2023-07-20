@@ -10,7 +10,7 @@ export default function Resume() {
         <section className="resume-main-wrapper">
             <div className="link-container">
             <Link to='..'><FaArrowLeft/>Go back</Link>
-            <a href='../../public/files/Dylan_Luiz_frontend_developer.pdf'
+            <a href='../../public/files/Dylan_Luiz_Frontend_Developer.pdf'
                download
                rel='noreferrer' >Download CV</a>
             </div>
