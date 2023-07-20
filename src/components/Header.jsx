@@ -69,7 +69,7 @@ export default function Header() {
             )
         } else if (item === 'CV') {
            return (
-           <a className="drop-down-links" href="https://www.linkedin.com/in/dylan-luiz-58a17a216/" target="_blank"><li 
+           <a className="drop-down-links" ><li 
             className={`drop-down-list-items ${activeItem === index && 'is-hovered'}` } 
             onMouseOver={() => setActiveItem(index)}
             onMouseLeave={() => setActiveItem(null)}
@@ -77,7 +77,7 @@ export default function Header() {
             key={item}><Link to='/resume'>{item}</Link></li></a>)
         } else if (item === 'LinkedIn') {
             return (
-            <a className="drop-down-links" href=""><li 
+            <a className="drop-down-links" href="https://www.linkedin.com/in/dylan-luiz-58a17a216/" target="_blank"><li 
             className={`drop-down-list-items ${activeItem === index && 'is-hovered'}` } 
             onMouseOver={() => setActiveItem(index)}
             onMouseLeave={() => setActiveItem(null)}

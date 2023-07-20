@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState } from "react";
 import Home from "./components/Home";
 import ProjectInfo from "./components/ProjectInfo";
+import Resume from "./components/Resume";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./../server"
 
@@ -31,6 +32,7 @@ export default function App() {
             <Routes>
               <Route path='/' element={<Home/>} />
               <Route path='/projects/:id' element={<ProjectInfo/>} />
+              <Route path='/resume' element={<Resume />} />
             </Routes>
           </BrowserRouter>
         </ScrollContext.Provider>   
