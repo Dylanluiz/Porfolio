@@ -59,7 +59,7 @@ export default function Main() {
     },
     {
         transform: `translateX(${(scrollTrack(10, 1, (screenWidth), -2) / screenWidth) /2 * 100}%)`
-    }] : null
+    }]: null
 
     const transformXDescOptions = screenWidth <= 767 ? [{}] 
     : screenWidth >=768 ?
@@ -71,7 +71,8 @@ export default function Main() {
     },
     {
         transform: `translateX(-${(scrollTrack(10, 1, (screenWidth), 1) / screenWidth) /2 * 100}%)`
-    }] : null
+    }]
+    : null
         
     const scaleStyle = [
         {

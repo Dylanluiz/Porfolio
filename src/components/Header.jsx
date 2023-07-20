@@ -10,19 +10,40 @@ export default function Header() {
     const [isClicked, setIsClicked] = useState(false)
     const [activeItem, setActiveItem] = useState(null)
     const dropDownItems =["About", "Projects", "Contact", 'LinkedIn', 'CV', 'Email']
+    const screenWidth = window.innerWidth
     const dropDownFunctions = [
         () => {
-        setIsClicked(prev => !prev)
-        scrollTo({top: 400, behavior: 'smooth'})}
+            setIsClicked(prev => !prev)
+            scrollTo({top: 
+                screenWidth < 768 ? 400 :
+                screenWidth < 1024 ? 650 :
+                screenWidth >= 1024 ? 750 : null
+                
+                , behavior: 'smooth'})}
         ,
         () => {
             setIsClicked(prev => !prev)
-            scrollTo({top: 920, behavior: "smooth"})
+            scrollTo({top: screenWidth < 768 ? 940 :
+                screenWidth < 1024 ? 1200 :
+                screenWidth >= 1024 ? 1300 : null
+                , behavior: "smooth"})
         }
         ,
         () => {
             setIsClicked(prev => !prev)
-            scrollTo({top: 2500, behavior: "smooth"})
+            scrollTo({top: 3000, behavior: "smooth"})
+        }
+        ,
+        () => {
+            setIsClicked(prev => !prev)
+        }
+        ,
+        () => {
+            document.body.classList.remove('no-scroll')
+        }
+        ,
+        () => {
+            setIsClicked(prev => !prev)
         }
     
     ]
@@ -74,7 +95,7 @@ export default function Header() {
             onMouseOver={() => setActiveItem(index)}
             onMouseLeave={() => setActiveItem(null)}
             onClick={dropDownFunctions[index]}
-            key={item}><Link to='/resume'>{item}</Link></li></a>)
+            key={item}><Link to='resume'>{item}</Link></li></a>)
         } else if (item === 'LinkedIn') {
             return (
             <a className="drop-down-links" href="https://www.linkedin.com/in/dylan-luiz-58a17a216/" target="_blank"><li 

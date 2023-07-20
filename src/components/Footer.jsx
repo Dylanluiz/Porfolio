@@ -6,7 +6,7 @@ export default function Footer() {
     return (
         <footer>
             <a href="https://www.linkedin.com/in/dylan-luiz-58a17a216/" target="_blank"><FaLinkedin/></a>
-            <Link to='resume'><FaFile /></Link>
+            <Link to='/resume'><FaFile /></Link>
             <a href="https://github.com/Dylanluiz" target="_blank"><FaGithubSquare/></a>
         </footer>
     )
