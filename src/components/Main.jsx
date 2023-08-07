@@ -2,6 +2,7 @@ import React, { startTransition, useContext, useEffect, useRef, useState } from 
 import { about } from "../data/about-data"
 import { ScrollContext } from "../App"
 import { FaChevronUp } from 'react-icons/fa'
+import {useTransition, animated} from '@react-spring/web'
 
 export default function Main() {
     const { scrollY } = useContext(ScrollContext)
@@ -9,6 +10,12 @@ export default function Main() {
     const screenWidth = window.innerWidth
     let transformXTopper = []
     let transformXDesc = []
+    const topTopTransition = useTransition(isPastTop, {
+        from: {opacity: 0},
+        enter: {opacity: 1},
+        leave: {opacity: 0},
+        config: {duration: 400}
+    })
 
 
 
@@ -101,9 +108,14 @@ export default function Main() {
 
     return (
         <main>
-           {isPastTop && <div onClick={
-                () => window.scrollTo({top: 0, behavior: 'smooth'})} 
-                className="to-top"><FaChevronUp /></div>}
+           {topTopTransition((style, item) => {
+            return item ? 
+                <animated.div style={style} className="animated-div">
+                    <div onClick={
+                    () => window.scrollTo({top: 0, behavior: 'smooth'})} 
+                    className="to-top"><FaChevronUp /></div>
+                </animated.div> : ''
+           })}
             <section className="about-section">
                 <div className="about-container">
                     {aboutElements}

@@ -10,18 +10,18 @@ import { createServer, Model } from "miragejs";
             id: 1,
             name: "Quizzical",
             link: ["../images/Q.png", '../images/Quiz-vid.gif', '../images/Quiz-home-page.PNG'],
-            desc: "A quiz game based app where the user can select the category that they wish to be quized, then the user is propted with diffrent questions given by a third party API, the user earns xp by answering questions correctly. The level system scales with the players level",
+            desc: "A quiz game-based app where the user can select the category that they wish to be quizzed on. Then, the user is prompted with different questions given by a third-party API. The user earns XP by answering questions correctly. The level system scales with the player's level.",
             technologies: ['React.js', 'JavaScript', 'CSS', 'APIs'],
             site: "https://frolicking-brigadeiros-80c272.netlify.app/",
             git: 'https://github.com/Dylanluiz/Guessing-game'})
         server.create('project', {
             id: 2,
-            name: "Quizzical",
-            link: ["../images/Q.png"],
-            desc: "A quiz game based app where the user can select the category that they wish to be quized, then the user is propted with diffrent questions given by a third party API, the user earns xp by answering questions correctly. The level system scales with the players level",
-            technologies: ['React.js', 'JavaScript', 'CSS', 'APIs'],
-            site: "https://frolicking-brigadeiros-80c272.netlify.app/",
-            git: 'https://github.com/Dylanluiz/Guessing-game'
+            name: "Kanban",
+            link: ["../images/Kanban.png","../images/kanban-img-1.png", '../images/Kanban-vid.gif', '../images/kanban-img-2.png', '../images/kanban-img-3.png', '../images/kanban-img-4.png'],
+            desc: "Kanban is an organizational app, designed with the user in mind. The app is customizable, enabling users to create, edit, and alter the status of tasks. The user is able to create boards, each with their own repository of tasks and associated subtasks",
+            technologies: ['React.js', 'JavaScript', 'CSS', 'APIs', 'react-spring'],
+            site: "https://amazing-moonbeam-c1d97a.netlify.app/",
+            git: 'https://github.com/Dylanluiz/kanban-board'
         })
        },
 
