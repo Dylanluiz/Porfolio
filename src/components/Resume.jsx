@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import {FaReact, FaCss3Alt, FaJsSquare, FaHtml5, FaArrowLeft} from 'react-icons/fa'
 import Marquee from "react-fast-marquee"
 import Footer from './Footer'
-
+import CV from './cv_dylan.pfd'
 
 export default function Resume() {
     return (
@@ -11,8 +11,10 @@ export default function Resume() {
         <section className="resume-main-wrapper">
             <div className="link-container">
             <Link to='..'><FaArrowLeft/>Go back</Link>
-            <a href='../assets/cv_dylan.pdf'
-               download
+            <a href={CV}
+               download="Dylan-Luiz-CV"
+               target='_blank'
+               rel='noreferrer'
                 >Download CV</a>
             </div>
 
