@@ -9,7 +9,7 @@ import { createServer, Model } from "miragejs";
         server.create('project', {
             id: 1,
             name: "Quizzical",
-            link: ["../images/Q.png", '../images/Quiz-vid.gif', '../images/Quiz-home-page.PNG'],
+            link: ["../images/Q.png", '../images/Quiz-vid.gif', '../images/Quiz-home-page.PNG', '../images/quiz-question-page.PNG'],
             desc: "A quiz game-based app where the user can select the category that they wish to be quizzed on. Then, the user is prompted with different questions given by a third-party API. The user earns XP by answering questions correctly. The level system scales with the player's level.",
             technologies: ['React.js', 'JavaScript', 'CSS', 'APIs'],
             site: "https://frolicking-brigadeiros-80c272.netlify.app/",
