@@ -16,7 +16,7 @@ export default function Resume() {
                target='_blank'
                rel='noreferrer'
                 >Download CV</a>
-            </div>
+            </div> 
 
             <h1>Resume</h1>
             <div className='resume-info-container'>
