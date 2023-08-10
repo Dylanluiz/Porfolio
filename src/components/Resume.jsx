@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import {FaReact, FaCss3Alt, FaJsSquare, FaHtml5, FaArrowLeft} from 'react-icons/fa'
 import Marquee from "react-fast-marquee"
 import Footer from './Footer'
-import CV from 'cv_dylan.pfd'
+import {CV} from '../assets/dylan.pdf'
 
 export default function Resume() {
     return (
