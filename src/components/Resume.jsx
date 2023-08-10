@@ -10,7 +10,7 @@ export default function Resume() {
         <section className="resume-main-wrapper">
             <div className="link-container">
             <Link to='..'><FaArrowLeft/>Go back</Link>
-            <a href='src\assets\dylan.pdf'
+            <a href='../../files/dylan.pdf'
                download="Dylan-Luiz-CV"
                target='_blank'
                rel='noreferrer'
