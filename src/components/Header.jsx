@@ -23,9 +23,9 @@ export default function Header() {
         ,
         () => {
             setIsClicked(prev => !prev)
-            scrollTo({top: screenWidth < 768 ? 940 :
-                screenWidth < 1024 ? 1200 :
-                screenWidth >= 1024 ? 1300 : null
+            scrollTo({top: screenWidth < 768 ? 900 :
+                screenWidth < 1024 ? 1300 :
+                screenWidth >= 1024 ? 1450 : null
                 , behavior: "smooth"})
         }
         ,

@@ -55,7 +55,7 @@ export default function Main() {
         transform: `translateX(${scrollTrack(25, 10, 800, -1)}px)`, transition: "all 0.3s ease"
     },
     {
-        transform: `translateX(${scrollTrack(15, 12, 800, -1)}px)`, transition: "all 0.3s ease"
+        transform: `translateX(${scrollTrack(20, 12, 800, -1)}px)`, transition: "all 0.3s ease"
     }] 
     : screenWidth >= 768 ?
     transformXTopper = [{ 

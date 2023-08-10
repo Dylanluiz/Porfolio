@@ -4,13 +4,14 @@ import {FaReact, FaCss3Alt, FaJsSquare, FaHtml5, FaArrowLeft} from 'react-icons/
 import Marquee from "react-fast-marquee"
 import Footer from './Footer'
 
+
 export default function Resume() {
     return (
         <>
         <section className="resume-main-wrapper">
             <div className="link-container">
             <Link to='..'><FaArrowLeft/>Go back</Link>
-            <a href='../../public/files/CV.PDF'
+            <a href='../../public/files/cv.pdf'
                download="Dylan Luiz Frontend Dev CV"
                rel='noreferrer' >Download CV</a>
             </div>
@@ -55,7 +56,22 @@ export default function Resume() {
                 <div className="marquee-container">
                     
                     <p className="html"><FaHtml5/>HTML -</p>
+                </div> 
+                <div className="marquee-container">
+                    <p className="react"><FaReact/>React -</p>
+                </div>
+                <div className="marquee-container">
+                    
+                    <p className="css"><FaCss3Alt/>CSS -</p>
                 </div>  
+                <div className="marquee-container">
+                    
+                    <p className='js'><FaJsSquare/>JavaScript -</p>
+                </div>
+                <div className="marquee-container">
+                    
+                    <p className="html"><FaHtml5/>HTML -</p>
+                </div>   
             </Marquee>
             <p className="additional-skills-title">Additional skills</p>
             <ul className="additional-skills">
