@@ -1193,6 +1193,17 @@ footer > a > svg {
     }
   }
     
+  @media (min-width: 1200px) {
+    .about--desc-2, .about--desc-1 {
+      padding-right: 150px;
+    }
+
+    .about--desc-2 {
+      padding-right: 200px;
+    }
+  }
+  
+
   @media (min-width: 1440px) {
      /* about */
 
@@ -1234,7 +1245,22 @@ footer > a > svg {
   }
 
   .about--desc-2 {
-    padding-right: 350px;
+    padding-right: 400px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .about--desc-0 {
+    padding: 30px 150px 30px 30px; 
+  } 
+
+  .about--desc-1, 
+  .about--desc-2 {
+    padding: 30px 350px 30px 30px; 
+  }
+
+  .about--desc-2 {
+    padding-right: 450px;
   }
 }
 
