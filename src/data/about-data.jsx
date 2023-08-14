@@ -2,7 +2,7 @@ export const about = [{
     tag: "I live to learn.",
     desc: "When I find something that I enjoy, I dive headfirst and learn as much as I can about that topic and all that surrounds it, allowing myself to be fully immersed."
 }, {
-    tag: "I live to problem solving.",
+    tag: "I live to problem solve.",
     desc: "When encountering a problem, I look at it as a learning opportunity. By doing this, I afford myself the chance to learn something new and expand my understanding through relentless research and practice."
 }, {
     tag: "I live for self-imporvement.",
