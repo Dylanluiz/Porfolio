@@ -23,6 +23,15 @@ import { createServer, Model } from "miragejs";
             site: "https://amazing-moonbeam-c1d97a.netlify.app/",
             git: 'https://github.com/Dylanluiz/kanban-board'
         })
+        server.create('project', {
+            id: 3,
+            name: "Coming soon...",
+            link: ["../images/Audio.png"],
+            desc: "Kanban is an organizational app, designed with the user in mind. The app is customizable, enabling users to create, edit, and alter the status of tasks. The user is able to create boards, each with their own repository of tasks and associated subtasks",
+            technologies: ['React.js', 'JavaScript', 'CSS', 'APIs', 'react-spring'],
+            site: "javascript:",
+            git: 'javascript:'
+        })
        },
 
        routes() {

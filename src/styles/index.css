@@ -396,6 +396,19 @@ body, html {
   align-self: center;
 }
 
+.project:last-child .project--img {
+  filter: blur(5px);
+}
+
+.project:last-child a {
+  filter: blur(1px);
+}
+
+.project:last-child a:nth-last-child(1) {
+  filter: blur(5px);
+  display: none;
+}
+
 .project--name {
  margin: 0;
  padding-top: 10px;
@@ -1211,6 +1224,17 @@ footer > a > svg {
   .read-more--desc {
     max-width: 700px;
   }
+  }
+}
+
+@media (min-width: 1750px) {
+  .about--desc-1, 
+  .about--desc-2 {
+    padding: 30px 250px 30px 30px; 
+  }
+
+  .about--desc-2 {
+    padding-right: 350px;
   }
 }
 
