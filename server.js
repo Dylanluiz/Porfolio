@@ -26,7 +26,7 @@ import { createServer, Model } from "miragejs";
         server.create('project', {
             id: 3,
             name: "Audiophile",
-            link: ["../images/Audio.png"],
+            link: ["../images/Audio.png", "../images/Audiophile-1.png", "../images/Audiophile-2.png", "../images/Audiophile-3.png", "../images/Audiophile-4.gif", "../images/Audiophile-5.png", "../images/Audiophile-6.gif"],
             desc: "Kanban is an organizational app, designed with the user in mind. The app is customizable, enabling users to create, edit, and alter the status of tasks. The user is able to create boards, each with their own repository of tasks and associated subtasks",
             technologies: ['React.js', 'JavaScript', 'CSS', 'APIs', 'react-spring', 'firebase'],
             site: "https://extraordinary-bunny-d8f9da.netlify.app/",
