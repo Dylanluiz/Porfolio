@@ -396,7 +396,7 @@ body, html {
   align-self: center;
 }
 
-.project:last-child .project--img {
+/* .project:last-child .project--img {
   filter: blur(5px);
 }
 
@@ -407,7 +407,7 @@ body, html {
 .project:last-child a:nth-last-child(1) {
   filter: blur(5px);
   display: none;
-}
+} */
 
 .project--name {
  margin: 0;
