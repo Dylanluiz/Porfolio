@@ -32,11 +32,17 @@ export default function Projects() {
     },
     {
         transform: `scale(${scale(0.001, 0.98, 1, 100)})`, transition: 'all 0.4s ease'
+    },
+    {
+        transform: `scale(${scale(0.001, 0.98, 1, 100)})`, transition: 'all 0.4s ease'
     }
 
     ] : screenWidth >= 768 ? [{
         transform: `scale(${scale(0.001, 0.98, 1, 65)})`, transition: 'all 0.4s ease'
     }, 
+    {
+        transform: `scale(${scale(0.001, 0.98, 1, 65)})`, transition: 'all 0.4s ease'
+    },
     {
         transform: `scale(${scale(0.001, 0.98, 1, 65)})`, transition: 'all 0.4s ease'
     },

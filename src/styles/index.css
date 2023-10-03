@@ -396,18 +396,22 @@ body, html {
   align-self: center;
 }
 
-/* .project:last-child .project--img {
-  filter: blur(5px);
+/* blur */
+.project:last-child .project--img {
+  filter: blur(10px) opacity(.5) sepia(3) brightness(2.4);
 }
 
 .project:last-child a {
   filter: blur(1px);
+  display: none;
 }
 
 .project:last-child a:nth-last-child(1) {
   filter: blur(5px);
   display: none;
-} */
+}
+
+/* blur */
 
 .project--name {
  margin: 0;
